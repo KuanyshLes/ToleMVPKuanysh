@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccc8c8"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:layout_marginBottom="1dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:weightSum="9">
+
+        <TextView
+            android:id="@+id/main_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:enabled="false"
+            android:layout_weight="3"
+            android:text="Удалить"
+            android:textSize="16dp"
+            android:textColor="#9B9B9B" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_weight="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="Товары"
+            android:textColor="#151615"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/main_select"
+            android:layout_width="75dp"
+            android:layout_height="25dp"
+            android:layout_weight="3"
+            android:gravity="right"
+            android:text="Выбрать"
+            android:textColor="#9B9B9B"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+    <EditText
+        android:id="@+id/search_product"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:inputType="textNoSuggestions"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/rectangleforsearch"
+        android:layout_below="@+id/my_toolbar"
+        android:textColor="@color/grey"
+        android:hint="Поиск..." />
+    <ImageView
+        android:src="@drawable/searchicon"
+        android:layout_marginTop="75dp"
+        android:layout_marginLeft="320dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/rectangle_left_top_right"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/search_product" >
+    </android.support.v7.widget.RecyclerView>
+
+
+
+
+</RelativeLayout>

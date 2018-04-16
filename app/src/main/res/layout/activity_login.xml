@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/toolbar"
+        android:background="@color/login_page_background_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--<TextView
+                android:id="@+id/buttonBack"
+                android:layout_centerVertical="true"
+                android:textSize="17sp"
+                android:textColor="@color/grey"
+                android:text="Назад"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+                -->
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:textSize="20sp"
+                android:textColor="@color/dark_grey"
+                android:text="Войти"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:background="@color/login_page_background_color"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40">
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:src="@drawable/supermarket"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <View
+                android:alpha="0.7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#875b6368"/>
+
+            <ImageView
+                android:scaleType="center"
+                android:src="@drawable/logo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"/>
+
+
+        <EditText
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:hint="Введите номер или эл. почту"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/login_edittext_background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            />
+        <EditText
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:inputType="textPassword"
+            android:hint="Пароль"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/login_edittext_background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
+
+            <TextView
+                android:textSize="13sp"
+                android:id="@+id/tvForgotPassword"
+                android:text="@string/forgot_password"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+        <Button
+            android:textAllCaps="false"
+            android:id="@+id/buttonLogin"
+            android:textSize="15sp"
+            android:text="Войти"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_for_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="13"/>
+
+        <LinearLayout
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                android:id="@+id/tvDontHaveAccount"
+                android:textSize="15sp"
+                android:textColor="@color/grey"
+                android:layout_centerVertical="true"
+                android:layout_width="0dp"
+                android:layout_weight="7"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Вы ещё не зарегестрированы?"/>
+            <Button
+                android:id="@+id/buttonCreateAccount"
+                android:text="Создать"
+                android:textColor="@color/login_button"
+                android:background="@drawable/create_account_button"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tvDontHaveAccount"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

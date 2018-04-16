@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">KanatTole</string>
+
+    <string name="search">Поиск...</string>
+
+    <string name="forgot_password"><u>Забыли пароль?</u></string>
+    <string name="redirect"><u>Переотправить</u></string>
+    <string name="regulation"><u>Правила и условия</u></string>
+    <string name="detail_product_fragment">detail_product_fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

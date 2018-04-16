@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.askar.task3bottomnavigationview.com.example.askar.KanatTole.MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:id="@+id/container">
+    </FrameLayout>
+
+    <com.example.askar.KanatTole.Utils.BottomNavigationViewEx
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottomNavViewBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/white_grey_border_top"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconTint="@color/bottom_bar_item_selector">
+
+    </com.example.askar.KanatTole.Utils.BottomNavigationViewEx>
+
+</RelativeLayout>

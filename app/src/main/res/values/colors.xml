@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="grey">#9E9E9E</color>
+    <color name="dark_grey">#4A4A4A</color>
+
+    <color name="login_button">#4EBAC7</color>
+
+    <color name="create_account_button">#DFF0EE</color>
+
+    <color name="login_page_background_color">#F2F2F4</color>
+
+    <color name="colorSilver">#d8d8d8</color>
+
+    <color name="background">#635d5d</color>
+    <color name="background2">#f2ebeb</color>
+
+
+    <color name="indicator_color">@color/background</color>
+    <color name="description_color">@color/background</color>
+    <color name="color1">#fafafa</color>
+    <color name="color2">#9b9b9b</color>
+    <color name="color3">#3f9c7f</color>
+    <color name="colorBlack">#2e2e2a</color>
+    <color name="colorGreen">#47c4c0</color>
+    <color name="start_color">#4ebac7</color>
+    <color name="center_color">#74cbd6</color>
+    <color name="end_color">#a5e8ef</color>
+
+    <color name="decolor">#a24ebac7</color>
+
+    <color name="switchTrack">#ffd600</color>
+    <color name="switchTrackDisable">#90caf9</color>
+    <color name="switchTrackActive">#1565c0</color>
+    <color name="switchTrackNormal">#90caf9</color>
+    <color name="switchThumbBgActive">#1b5e20</color>
+    <color name="switchThumbActive">#ad1457</color>
+    <color name="switchThumbkNormal">#64b5f6</color>
+    <color name="red">#ea4f4f</color>
+
+
+</resources>

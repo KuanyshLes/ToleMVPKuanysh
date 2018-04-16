@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.askar.KanatTole.Fragments.SettingsFragment.Employers">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shadow"
+        >
+
+    </android.support.v7.widget.Toolbar>
+    <android.support.v7.widget.RecyclerView
+        android:paddingHorizontal="13dp"
+        android:id="@+id/recyclerView"
+        android:layout_above="@+id/linear_bottom"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    <LinearLayout
+        android:id="@+id/linear_bottom"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="0"
+                android:padding="10dp"
+                android:text="Добавление сотрудника "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/adding_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/for_button_settings"
+                android:paddingHorizontal="10dp"
+                android:text="Добавить еще"
+                android:textAllCaps="false"
+                android:textColor="#4ebac7"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/recyclerView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:layout_weight="1"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:text="Сотрудники"
+        android:textColor="#1f3b41"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_weight="0"
+        android:fontFamily="sans-serif"
+        android:text="Назад"
+        android:textColor="#51cec1"
+        android:textSize="20dp" />
+
+
+</RelativeLayout>
+

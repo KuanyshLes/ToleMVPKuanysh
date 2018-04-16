@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_own">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/toolbar"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/buttonBack"
+                android:layout_centerVertical="true"
+                android:textSize="17sp"
+                android:textColor="@color/login_button"
+                android:text="Назад"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/buttonBack"
+                android:layout_centerHorizontal="true"
+                android:text="Регистрация"
+                android:textColor="@color/dark_grey"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:background="@color/login_page_background_color"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+
+
+        <EditText
+            android:id="@+id/name_edit"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:hint="Имя"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/login_edittext_background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            />
+        <EditText
+            android:id="@+id/surname_edit"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:hint="Фамилия"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/login_edittext_background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            />
+        <EditText
+            android:id="@+id/email_edit"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:hint="Email"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/login_edittext_background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            />
+
+        <EditText
+            android:id="@+id/name_of_sell_edit"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:hint="Название торговой точки"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/login_edittext_background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            />
+        <EditText
+            android:id="@+id/phone_number_edit"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:hint="Номер телефона"
+            android:inputType="phone"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/login_edittext_background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            />
+
+        <EditText
+            android:id="@+id/pass_edit"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:inputType="textPassword"
+            android:hint="Пароль"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/login_edittext_background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            />
+        <EditText
+            android:id="@+id/confirm_pass_edit"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:inputType="textPassword"
+            android:hint="Повторите пароль"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/login_edittext_background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            />
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/checkBox"
+                android:textSize="13sp"
+                android:id="@+id/tvAgreement"
+                android:text="Я согласен с условиями пользования"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textColor="@color/dark_grey"
+                android:textStyle="bold"
+                android:layout_below="@id/tvAgreement"
+                android:textSize="13sp"
+                android:id="@+id/tvForgotPassword"
+                android:text="@string/regulation"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"/>
+        <Button
+
+            android:textAllCaps="false"
+            android:id="@+id/buttonLogin"
+            android:textSize="15sp"
+            android:text="Зарегестрироваться"
+            android:textColor="@color/login_button"
+            android:background="@drawable/shape_for_white_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="13"/>
+
+
+    </LinearLayout>
+</RelativeLayout>

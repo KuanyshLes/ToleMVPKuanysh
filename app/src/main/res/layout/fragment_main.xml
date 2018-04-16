@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5efef"
+    tools:context="com.example.askar.KanatTole.Fragments.SettingsFragment.MainFragment">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shadow"
+
+        >
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/image"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_weight="40">
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:src="@drawable/settings_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <View
+            android:alpha="0.8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#875b6368"/>
+
+        <ImageView
+            android:scaleType="center"
+            android:src="@drawable/logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+    <LinearLayout
+
+        android:background="@drawable/item_shadow"
+        android:id="@+id/linear"
+        android:orientation="vertical"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_below="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/rl_my_profile"
+            android:background="@drawable/shadow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="20dp"
+                android:textColor="#c6b3b3"
+                android:text="Мой профиль"
+                android:id="@+id/text_My_profile"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <LinearLayout
+
+            android:id="@+id/rl_employers_list"
+            android:orientation="horizontal"
+            android:background="@drawable/shadow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="20dp"
+                android:textColor="#c6b3b3"
+                android:text="Сотрудники"
+                android:id="@+id/text_Employers"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="right"
+                android:textSize="20dp"
+                android:textColor="#c6b3b3"
+                android:text="0"
+                android:id="@+id/text_amount_of_employers"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rl_support"
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="20dp"
+                android:textColor="#c6b3b3"
+                android:text="Поддержка"
+                android:id="@+id/text_Support"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_alignLeft="@+id/linear"
+        android:layout_alignRight="@+id/linear"
+        android:id="@+id/exit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="21dp"
+        android:background="@drawable/rectangleforbutton"
+        android:text="Выйти"
+        android:textAllCaps="false"
+        android:textColor="#fafafa"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp"
+        android:fontFamily="sans-serif"
+        android:text="Настройки"
+        android:textColor="#1f3b41"
+        android:textSize="20dp" />
+
+
+</RelativeLayout>

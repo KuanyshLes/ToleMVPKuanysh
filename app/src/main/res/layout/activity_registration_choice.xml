@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="2"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/toolbar"
+        android:background="@color/login_page_background_color">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/buttonBack"
+                android:layout_centerVertical="true"
+                android:textSize="17sp"
+                android:textColor="@color/login_button"
+                android:text="Назад"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:textSize="20sp"
+                android:textColor="@color/dark_grey"
+                android:text="Регистрация"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imageViewOwner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/demo1"
+                android:scaleType="centerCrop"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#37474F"
+                android:alpha="0.6"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Как владелец"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:textSize="20sp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imageViewWorker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/demo2"
+                android:scaleType="centerCrop"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#37474F"
+                android:alpha="0.6"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Как продавец"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:textSize="20sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+
+

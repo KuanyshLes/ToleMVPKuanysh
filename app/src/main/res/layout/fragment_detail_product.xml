@@ -1,0 +1,314 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7e6e6"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="18"
+            android:layout_margin="5dp">
+            <TextView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:padding="5dp"
+                android:gravity="left"
+                android:background="@color/white"
+                android:text="Назад"
+                android:onClick="backtoproduct"
+                android:textColor="#9B9B9B"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="14"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Товары"
+                android:textColor="#4A4A4A"
+                android:textSize="22sp" />
+            <TextView
+                android:id="@+id/change_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:background="@color/white"
+                android:text="Изменить"
+                android:textColor="#9B9B9B"
+                android:textSize="16sp"
+                android:onClick="change" />
+        </LinearLayout>
+
+
+
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/my_toolbar"
+        android:background="#e2dede"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:background="#FFFFFF"
+            android:layout_height="0dp"
+            android:layout_weight="40"
+            android:layout_marginTop="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/my_toolbar"
+            app:srcCompat="@drawable/defaultimagefinal" />
+
+        <EditText
+            android:id="@+id/det_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:text="Chocolate"
+            android:focusable="false"
+            android:textSize="17sp"
+            android:focusableInTouchMode="false"
+            android:cursorVisible="false"
+            android:clickable="false"
+            android:textColor="#4A4A4A"
+            android:padding="10dp"
+            android:background="@drawable/rectangle"
+            android:layout_marginTop="19dp"
+            android:inputType="text"/>
+
+        <LinearLayout
+            android:id="@+id/linlayout1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:layout_below="@id/det_name"
+            android:orientation="horizontal"
+            android:weightSum="15"
+            android:layout_marginRight="18dp"
+            android:layout_marginLeft="18dp">
+
+            <TextView
+                android:id="@+id/price1"
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:layout_height="match_parent"
+                android:background="@drawable/rectangleright"
+                android:textColor="#b4b4b4"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:textSize="15sp"
+                android:text="Закупочная цена" />
+
+            <EditText
+                android:id="@+id/buymuch"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:paddingTop="19dp"
+                android:gravity="right"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:clickable="false"
+                android:layout_height="match_parent"
+                android:textSize="14sp"
+                android:textColor="#4A4A4A"
+                android:background="@drawable/rectanglerightandleft"
+                android:text="90"
+                android:inputType="numberDecimal"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="19dp"
+                android:gravity="left"
+                android:text="тг"
+                android:background="@drawable/rectangleleft"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linlayout2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:layout_below="@id/linlayout1"
+            android:orientation="horizontal"
+            android:weightSum="15"
+            android:layout_marginRight="18dp"
+            android:layout_marginLeft="18dp">
+
+            <TextView
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:layout_height="match_parent"
+                android:text="Розничная цена"
+                android:background="@drawable/rectangleright"
+                android:textColor="#b4b4b4"
+                android:textSize="15sp"
+                android:id="@+id/textView" />
+
+            <EditText
+                android:id="@+id/buyone"
+                android:paddingTop="19dp"
+                android:gravity="right"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="match_parent"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:cursorVisible="false"
+                android:clickable="false"
+                android:textColor="#4A4A4A"
+                android:textSize="15sp"
+                android:text="130"
+                android:layout_below="@+id/price1"
+                android:inputType="numberDecimal"
+                android:background="@drawable/rectanglerightandleft" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="19dp"
+                android:gravity="left"
+                android:text="тг"
+                android:background="@drawable/rectangleleft"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linlayout3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:layout_below="@id/linlayout2"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginRight="18dp"
+            android:layout_marginLeft="18dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:weightSum="10">
+                <TextView
+                    android:id="@+id/textView2"
+                    android:paddingTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="5"
+                    android:background="@drawable/rectanglebottom"
+                    android:textColor="#b4b4b4"
+                    android:text="Количества продукта"
+                    />
+                <EditText
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:textColor="#4A4A4A"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:cursorVisible="false"
+                    android:clickable="false"
+                    android:background="@drawable/rectangletop"
+                    android:text="15"
+                    android:inputType="numberDecimal"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:weightSum="10">
+                <TextView
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_weight="4"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/textView"
+                    android:textColor="#b4b4b4"
+                    android:background="@drawable/rectanglebottom"
+                    android:text="Уведомдения об окончании продукта"/>
+                <EditText
+                    android:id="@+id/amountnote"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#4A4A4A"
+                    android:gravity="center"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:cursorVisible="false"
+                    android:clickable="false"
+                    android:background="@drawable/rectangletop"
+                    android:layout_weight="6"
+                    android:inputType="numberDecimal"
+                    android:text="10"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+            <Button
+                android:id="@+id/button_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="18dp"
+                android:layout_marginLeft="18dp"
+                android:background="@drawable/rectangleforbutton"
+                android:visibility="visible"
+                android:text="Удалить"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/button_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="18dp"
+                android:layout_marginLeft="18dp"
+                android:background="@drawable/rectanglebuttonblue"
+                android:visibility="invisible"
+                android:text="Сохранить"
+                android:textColor="@color/white"
+                android:textSize="17sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

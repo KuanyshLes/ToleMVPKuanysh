@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    >
+
+    <TextView
+        android:id="@+id/totalPriceSurrender"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_for_white_button"
+        android:gravity="left|center"
+        android:textColor="@color/colorSilver"
+        android:textSize="20dp" />
+
+
+    <Button
+        android:id="@+id/total_dialog_surrender_success_btn"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/totalPriceSurrender"
+        android:layout_alignRight="@+id/totalPriceSurrender"
+        android:layout_below="@+id/totalPriceSurrender"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/shape_for_button"
+        android:text="OK"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    >
+
+    <EditText
+        android:id="@+id/totalPriceForPay"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_for_white_button"
+        android:gravity="left|center"
+        android:hint="Внесите сумму"
+        android:inputType="number"
+        android:textColor="@color/colorSilver"
+        android:textSize="20dp" />
+
+
+    <Button
+        android:id="@+id/total_dialog_cansel"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/totalPriceForPay"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_for_white_button"
+        android:gravity="center"
+        android:onClick="canselDialog"
+        android:text="Отмена"
+        android:textColor="@color/login_button"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/total_dialog_success"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/total_dialog_cansel"
+        android:layout_alignBottom="@+id/total_dialog_cansel"
+        android:layout_alignEnd="@+id/totalPriceForPay"
+        android:layout_alignRight="@+id/totalPriceForPay"
+        android:background="@drawable/shape_for_button"
+        android:text="Готово"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+</RelativeLayout>

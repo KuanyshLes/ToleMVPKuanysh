@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/grey</item>
+        <item name="colorPrimaryDark">@color/login_page_background_color</item>
+        <item name="colorAccent">@color/grey</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

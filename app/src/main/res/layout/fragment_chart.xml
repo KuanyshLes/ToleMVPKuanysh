@@ -1,0 +1,362 @@
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:background="@drawable/shadow"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Показатели"
+        android:textColor="#130909"
+        android:textSize="20dp" />
+
+
+    <RelativeLayout
+        android:layout_below="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+         <com.github.mikephil.charting.charts.LineChart
+            android:paddingHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/doxod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/rasxod"
+                android:layout_marginEnd="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_toLeftOf="@+id/prodazha"
+                android:layout_toStartOf="@+id/prodazha">
+
+                <ImageView
+                    android:id="@+id/dohod_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/dot_yellow" />
+
+                <TextView
+                    android:id="@+id/dohod_text"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toEndOf="@id/dohod_image"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif-monospace"
+                    android:text="Доход"
+                    android:textSize="12dp"
+                    android:layout_toRightOf="@id/dohod_image" />
+
+                <TextView
+                    android:textSize="15dp"
+                    android:id="@+id/doxod_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dohod_text"
+                    android:fontFamily="serif-monospace"
+                    android:text="20000 Т" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/prodazha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="57dp">
+
+                <ImageView
+                    android:id="@+id/prodazha_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dot_blue" />
+
+                <TextView
+
+                    android:id="@+id/prodazha_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toEndOf="@+id/prodazha_image"
+                    android:fontFamily="serif-monospace"
+                    android:text="Продажа"
+                    android:textSize="12dp"
+                    android:layout_toRightOf="@+id/prodazha_image" />
+
+                <TextView
+                    android:textSize="15dp"
+                    android:id="@+id/prodazha_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/prodazha_text"
+                    android:fontFamily="serif-monospace"
+                    android:text="200000 Т"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rasxod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="25dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp">
+
+                <ImageView
+                    android:id="@+id/rasxod_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dot_red" />
+
+                <TextView
+
+                    android:id="@+id/rasxod_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toEndOf="@+id/rasxod_image"
+                    android:layout_toRightOf="@+id/rasxod_image"
+                    android:fontFamily="serif-monospace"
+                    android:text="Расход"
+                    android:textSize="12dp"
+                    />
+
+                <TextView
+                    android:textSize="15dp"
+                    android:id="@+id/rasxod_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rasxod_text"
+                    android:fontFamily="serif-monospace"
+                    android:text="25252 Т" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:id="@+id/tab_layout"
+        android:layout_below="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="18dp"
+            android:gravity="center_horizontal"
+            android:paddingVertical="10dp"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textAllCaps="false"
+            android:text="День"
+            android:id="@+id/button_1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:textSize="18dp"
+            android:gravity="center_horizontal"
+            android:paddingVertical="10dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textAllCaps="false"
+            android:text="Неделя"
+            android:id="@+id/button_2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:textSize="18dp"
+            android:gravity="center_horizontal"
+            android:paddingVertical="10dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textAllCaps="false"
+            android:text="Месяц"
+            android:id="@+id/button_3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:textSize="18dp"
+            android:gravity="center_horizontal"
+            android:paddingVertical="10dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textAllCaps="false"
+            android:text="Год"
+            android:id="@+id/button_4"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#fafafa"
+        android:padding="30dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:background="@drawable/shadow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/Name1"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginStart="17dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Продажи"
+                    android:textColor="#939492"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/sum_text1"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginRight="13dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:text="TextView"
+                    android:textColor="#4ebac7"
+                    android:textSize="15dp"
+                    />
+            </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:background="@drawable/shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/Name2"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="17dp"
+                android:layout_marginStart="17dp"
+                android:fontFamily="sans-serif"
+                android:text="Продано"
+                android:textColor="#939492"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/sum_text2"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+
+                android:layout_marginEnd="13dp"
+                android:layout_marginRight="13dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text="TextView"
+                android:textColor="#4ebac7"
+                android:textSize="15dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:background="@drawable/shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/Name3"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="17dp"
+                android:layout_marginStart="17dp"
+                android:fontFamily="sans-serif"
+                android:text="Прибыль"
+                android:textColor="#939492"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/sum_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="13dp"
+                android:layout_marginRight="13dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text="TextView"
+                android:textColor="#4ebac7"
+                android:textSize="15dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:background="@drawable/shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/Name4"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="17dp"
+                android:layout_marginStart="17dp"
+                android:fontFamily="sans-serif"
+                android:text="Товары в обороте"
+                android:textColor="#939492"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/sum_text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="13dp"
+                android:layout_marginRight="13dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text="TextView"
+                android:textColor="#4ebac7"
+                android:textSize="15dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>
